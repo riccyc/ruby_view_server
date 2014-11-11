@@ -1,5 +1,7 @@
 require 'erb'
 
-x = 42
-template = ERB.new "The value of x is: <%= x %>"
+firstname = "riccyc"
+surname = "clark"
+erb_string = "<h2><%= firstname.upcase %> <%= surname.upcase %></h2>"
+template = ERB.new (erb_string)
 puts template.result(binding)
